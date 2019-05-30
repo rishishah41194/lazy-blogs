@@ -40,7 +40,7 @@ $post_id = get_the_id();
 	<article class="post">
 		<header>
 			<div class="title">
-				<h2><a href="http://wpcontribution.local.in/test-blog"><?php echo esc_html( get_the_title( $post_id ) ); ?></a></h2>
+				<h2><a href="<?php echo esc_url( get_the_permalink( $post_id ) ); ?>"><?php echo esc_html( get_the_title( $post_id ) ); ?></a></h2>
 			</div>
 		</header>
 		<?php if ( has_post_thumbnail() ) { ?>
@@ -48,7 +48,7 @@ $post_id = get_the_id();
 		<?php }
 		?>
 		<?php
-		echo $posts[0]->post_content;
+		echo wp_kses_post( $posts[0]->post_content );
 		?>
 	</article>
 	<!-- Post -->
