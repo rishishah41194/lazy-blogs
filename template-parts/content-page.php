@@ -30,10 +30,7 @@ $post_id = get_the_id();
 		));
 		?>
 	</section>
-
 </section>
-
-
 <!-- Main -->
 <div id="main">
 
