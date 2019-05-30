@@ -34,9 +34,6 @@ $post_id = get_the_id();
 </section>
 
 
-
-
-
 <!-- Main -->
 <div id="main">
 
