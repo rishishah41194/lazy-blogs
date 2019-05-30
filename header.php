@@ -18,14 +18,14 @@ wp_head();
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 </head>
-<body class="is-preload">
+<body class="is-preload <?php body_class( $class ); ?>">
 
 <!-- Wrapper -->
 <div id="wrapper">
 
 	<!-- Header -->
 	<header id="header">
-		<h1><a href="<?php echo esc_url( get_bloginfo( 'url' ) ); ?>"><?php echo esc_html( get_bloginfo( 'name' ) ); ?></a></h1>
+		<h1><a href="<?php echo esc_url( home_url() ); ?>"><?php echo esc_html( get_bloginfo( 'name' ) ); ?></a></h1>
 		<?php
 		wp_nav_menu( array(
 			'theme_location' => 'primary',
